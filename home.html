@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BMI CALCULATOR</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/form.css">
+<link rel="stylesheet" href="js/calc.js">
+
+<SCRIPT LANGUAGE="JavaScript">
+function mod(div,base) {
+return Math.round(div - (Math.floor(div/base)*base));
+}
+function calcBmi() {
+var w = document.bmi.weight.value * 1;
+var HeightFeetInt = document.bmi.htf.value * 1;
+var HeightInchesInt = document.bmi.hti.value * 1;
+HeightFeetConvert = HeightFeetInt * 12;
+h = HeightFeetConvert + HeightInchesInt;
+displaybmi = (Math.round((w * 703) / (h * h)));
+var rvalue = true;
+if ( (w <= 35) || (w >= 500)  || (h <= 48) || (h >= 120) ) {
+alert ("Invalid data.  Please check and re-enter!");
+rvalue = false;
+}
+if (rvalue) {
+if (HeightInchesInt > 11) {
+reminderinches = mod(HeightInchesInt,12);
+document.bmi.hti.value = reminderinches;
+document.bmi.htf.value = HeightFeetInt + 
+((HeightInchesInt - reminderinches)/12);
+document.bmi.answer.value = displaybmi;
+}
+if (displaybmi <19) 
+document.bmi.comment.value = "Underweight";
+if (displaybmi >=19 && displaybmi <=25) 
+document.bmi.comment.value = "Desirable";
+if (displaybmi >=26 && displaybmi <=29) 
+document.bmi.comment.value = "Prone to health risks";
+if (displaybmi >=30 && displaybmi <=40) 
+document.bmi.comment.value = "Obese";
+if (displaybmi >40) 
+document.bmi.comment.value = "Extremely obese";
+document.bmi.answer.value = displaybmi; }
+return rvalue;
+}
+//  End -->
+</SCRIPT>
+
+
+
+<style>
+body {
+  background-image: url('images/foni.jfif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: relative;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+  width:100%;
+}
+</style>
+
+</head>
+
+
+
+<body>
+<ul><h3> <li><a href="#Information">Information</a></li></h3>
+<li><h3><a href="#BMI Calculator">BMI Calculator </a></li><h3>
+  <li><h3><a href="#Table">Table </a></li><h3>
+<li><h3><a href="#Inform about yourself">Inform about yourself</a></li><h3>
+<h2 align="center"> <a name="Information">Information</A></h2>
+<h2><p align="center">Body mass index is a formula used to assess a person’s body weight relative to height (National Heart, Lung, and Blood Institute, 1998). 
+
+<p align="center">BMI – body mass index-reflects a person's state of health. Using the body mass index, you can find out whether you are overweight, or, conversely, whether you are underweight. 
+According to research from the Johns Hopkins University School of Hygiene and Public health, BMI is a representative indicator of body fat that depends on age, gender, and not ethnicity (The Johns Hopkins University School of Hygiene and Public Health, 1996).</p>
+
+
+<p align="center">BMI takes into account natural variations in body shape, giving a healthy weight range for a particular height.
+As well as measuring your BMI, healthcare professionals may take other factors into account when assessing if you're a healthy weight.
+
+<p align="center">For many people, the body mass index is far from optimal. The body mass index for women is considered normal if the indicator is in the range from 20 to 22. For men, from 23 to 25. </p>
+
+
+<p align="center">BMI is not used for muscle builders, long distance athletes, pregnant women, the elderly or young children. This is because BMI does not take into account whether the weight is carried as muscle or fat, just the number. Those with a higher muscle mass, such as athletes, may have a high BMI but not be at greater health risk. Those with a lower muscle mass, such as children who have not completed their growth or the elderly who may be losing some muscle mass may have a lower BMI. During pregnancy and lactation, a woman's body composition changes, so using BMI is not appropriate.<i></h2>
+ 
+<h3><p align="center"><i>BMI = W / H<sup>2</sup>
+(W – body weight in kilograms, H-height in meters)</i></p></h3>
+
+<h2 align="center"> <a name="Table">Table</a></h2>
+<h3><p align="center">The results are also shown on the body mass index chart and in the height and weight table.</p>
+<p align="center">The calculation is based on height and weight. After clicking on the "Calculate" button, you will see the results of the analysis of the entered data and recommendations for Your body mass index .</p></h3> </div>
+    
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="images/2.1.png">
+      <img src="images/2.1.png" alt="Cinque Terre" width="600" height="500">
+    </a>
+    <div class="desc">Picture-1</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="images/2.2.png">
+      <img src="images/2.2.png" alt="Forest" width="600" height="500">
+    </a>
+    <div class="desc">Picture-2</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="images/3.1.png">
+      <img src="images/3.1.png" alt="Northern Lights" width="600" height="500">
+    </a>
+    <div class="desc">Picture-3</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="images/3.2.png">
+      <img src="images/3.2.png" alt="Mountains" width="600" height="500">
+    </a>
+    <div class="desc">Picture-4</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+  <h2><p align="center">1 lbs=0.454kg</p></h2>
+  <h2><p align="center">1 feet=30.48cm</p></h2>
+  <h2><p align="center">1 inches=2.54cm</p></h2>
+</div>
+
+<h2 align="center"> <a name="BMI Calculator">BMI Calculator</a></h2>
+<h2><p align="center">Please fill the table or you can write following above given tables. </p></h2>
+<form name=bmi>
+<center>
+<table width=400 border=0>
+<tr>
+<td align=center><B>Weight:</B>
+<input type=text name=weight SIZE=3 maxlength=3> lbs(pound).</td>
+</tr>
+<tr>
+<td align=center><B>Height:</B>
+<input type=text name=htf size=1 maxlength=1> Feet.         
+<input type=text name=hti size=2 maxlength=2> Inches.
+</td>
+</tr>
+<tr>
+<td align=center>
+<p align="center"><input type=button value="Calculate BMI" onclick="calcBmi()" ></p>
+</td>
+</tr>
+<tr>
+<td><B>Body Mass Index</B>
+<input type=text name=answer size=3>
+</td>
+</tr>
+<tr>
+<td>
+According to the Panel on Energy, Obesity, and 
+Body Weight Standards published by American 
+Journal of Clinical Nutrition, your category is:<br>
+<input type=text name=comment size=25>
+</td>
+</tr>
+</table>
+</center>
+</form>
+
+<h2 align="center"> <a name="Inform about yourself">Inform about yourself</A></h2>
+<form action="" style="border:1px solid #ccc">
+  <div class="container">
+   
+    <p>Please fill this form.</p>
+    <hr>
+    <label for="Name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="Name" required>
+    <label for="Surname"><b>Surname</b></label>
+    <input type="text" placeholder="Enter Surname" name="Surname" required>
+    <label for="Email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+    <label>
+      <p align="left"><b>Message</b>
+    <div class="form-group">
+    <label for="message"></label>
+    <textarea cols="30" rows="10" class="form-control p-3 rounded-0" id="message" name="message"required></textarea>
+    </div>
+    <td align="right-center"> <a href="#">Terms & Privacy.</a></td>
+    <td> <label>
+        <input type="checkbox" checked="checked" name="remember" >Agree
+      </label></td>
+    </tr> 
+<div class="clearfix">
+      <button type="submit" class="signupbtn">Send message</button>
+    </div>
+  </div>
+</form>
+
+
+<footer class="footer">
+<FONT SIZE="4" FACE="COURIER">
+<p align="center"><b>Contacts</b></p>
+<p align="center">Address: Aktau<br>
+Telephone: +7 7789586252<br>
+Fax: +7 7789586252<br>
+E-mail: meterovaa0216@gmail.com<br>
+Author: Meterova Akpanay Maxetovna </p>
+</footer>
+
+</body>
+</html>
